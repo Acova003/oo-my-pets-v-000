@@ -1,5 +1,6 @@
 require 'pry'
 class Owner
+<<<<<<< HEAD
   attr_accessor :name, :pets
   attr_reader :species
   
@@ -33,6 +34,19 @@ class Owner
   
   def feed_fish
     @pets[:fishes].each {|fish| fish.mood = 'happy'}
+=======
+  attr_accessor :name
+  attr_reader :species
+  
+  @@all = []
+  @@num_owners = @@all.size
+  
+  def initialize(species)
+    @species = "human"
+    
+    @name = owner.name
+    @@all << @name
+>>>>>>> ec3ff57b4949608ad8b133b98bf02fe155d09cfb
   end 
   
   def say_species
@@ -40,6 +54,7 @@ class Owner
     "I am a #{@species}."
   end 
   
+<<<<<<< HEAD
   def self.all 
     OWNERS
   end 
@@ -64,5 +79,9 @@ class Owner
   def list_pets
     #binding.pry
     "I have #{@pets[:fishes].length} fish, #{@pets[:dogs].length} dog(s), and #{@pets[:cats].length} cat(s)."
+=======
+  def pets 
+    @pets = {fishes: [], cats: [], dogs: []}
+>>>>>>> ec3ff57b4949608ad8b133b98bf02fe155d09cfb
   end 
 end
